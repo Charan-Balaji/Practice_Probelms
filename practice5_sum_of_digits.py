@@ -8,4 +8,4 @@ def sum_of_digits(n):
     return total                                                     # Return the final sum of digits
 
 number = int(input("Enter a number: "))                             
-print("The sum of digits of" ,number "is", sum_of_digits(number)) 
+print("The sum of digits of" ,number, "is", sum_of_digits(number)) 
