@@ -1,0 +1,14 @@
+# Imagine you have two mysterious numbers. Your task is to write a program that 
+# reveals which one of them is the bigger one. How will you solve this puzzle?
+
+def greater():  
+    if(n1>n2):                       # Conditions to verify the Greater number
+        print("The Greater Number is --> ", n1)
+    elif(n2<n1):
+        print("The Greater number is --> ", n2)
+    else:
+        print("BOTH number are EQUAL!!")
+        
+n1=int(input("ENTER NUMBER 1 : "))   # getting input from the user
+n2=int(input("ENTER NUMBER s : "))
+greater()                           # Calling our function
