@@ -10,26 +10,35 @@
 #Input should be in the form of integer value. 
 #Output must have the following format: Time Estimated: NN Minutes
 
-def washing_machine(weight, water_level):
-    if weight < 0:                                        # defining all  the conditions given in the question
-        print("INVALID INPUT!!!")
-    elif weight == 0:
-        print("Estimated Time : 0 Minutes")
-    elif weight > 7000:
-        print("OVERLOADED!!")
-    else:  
-        if water_level == 'L' and 0 < weight <= 2000:
-            print("Estimated Time : 25 Minutes")
-        elif water_level == 'M' and 2001 <= weight <= 4000:
-            print("Estimated Time : 35 Minutes")
-        elif water_level == 'H' and weight > 4000:
-            print("Estimated Time : 45 Minutes")
+
+A=input().strip() #to remove the white spaces
+parts= A.split(',') # to split the variable into parts
+if len(parts)!=2:
+    print('invalid')
+else:
+    try:
+        n=int(parts[0])   #the number part, containing the weight
+        value=(parts[1])  #the character part, containing the level of water
+
+        if n<0:                             # using if-elif-else statements, we execute conditions for being  INVALID 
+            print("invalid value")
+        elif n==0:
+            print("time estimate is zero")
+        elif n>7000:
+            print("exceeds the value")
+
+        value=input("enter the Water Level As Low ""L"" Medium: M Large:L")     #gettinh the value
+
+
+        if  value == 'L' and n<=2000 :            #using if-elif-else, we check conditions for the weight to print estimated time
+            print("estimate time is 25 Minutes")
+        elif value== 'M' and  2001 <= n <= 4000 :
+            print("estimate time is 35 Minutes")
+        elif value== 'H' and  4001 >= n  :
+            print("estimate time is 45 Minutes")
         else:
-            print("INVALID!!")                              # If the water level does not match conditions
+            print("invalid")
 
-weight = int(input("Enter weight of clothes in grams: "))   # Taking weight input from the user
-water_level = input("Enter water level (L/M/H): ").upper()  # changing to upper case, because i'm using upper case in the conditions
-
-washing_machine(weight, water_level)                        # Calling the function
-
+    except:
+        print("invalid")
     
