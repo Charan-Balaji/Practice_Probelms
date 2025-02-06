@@ -2,7 +2,7 @@
 def check_leap():
     if(yr%400==0):                         # for years that leaves 0 on dividing by 400   
         print("It is a Leap Year")    
-    elif(yr%100==0):                          
+    elif(yr%100==0):                       # other conditions to check for century 
         print("It is Not a Leap Year")        
     elif(yr%4==0):                         # for years that leaves 0 on dividing by 4
         print("It is a Leap Year")
