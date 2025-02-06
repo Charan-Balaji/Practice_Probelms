@@ -2,7 +2,7 @@
 # our challenge is to get a number from the user and identify groups to what the number belongs to.
 
 def check_group(n):
-    if n>40 and n<=50:                                        # providing conditions to check for 40 to 50
+    if n>40 and n<=50:                                        # providing  conditions to check for 40 to 50
         print("The Number belongs to the group : '40 to 50'")
     elif n>50:                                                # providing conditions to check for Above 50
         print("The number belongs to the group : 'ABOVE 50'")
